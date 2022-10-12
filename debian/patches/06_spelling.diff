@@ -1,0 +1,110 @@
+Description: Fix spelling errors
+Author: Bart Martens <bartm@debian.org>
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2020-07-21
+
+--- a/Twig.pm
++++ b/Twig.pm
+@@ -10310,7 +10310,7 @@
+ 
+ =item twig_roots
+ 
+-This argument let's you build the tree only for those elements you are
++This argument lets you build the tree only for those elements you are
+ interested in. 
+ 
+   Example: my $t= XML::Twig->new( twig_roots => { title => 1, subtitle => 1});
+@@ -10708,7 +10708,7 @@
+ =item DTD_base <path_to_DTD_directory>
+ 
+ If the DTD is in a different directory, looks for it there, useful to make up 
+-somewhat for the lack of catalog suport in C<expat>. You still need a SYSTEM
++somewhat for the lack of catalog support in C<expat>. You still need a SYSTEM
+ declaration
+ 
+ =item DTD_handler
+@@ -12133,7 +12133,7 @@
+ 
+   if( $elt->{first_child} && $elt->{first_child}->passes( 'title')) 
+ 
+-C<first_child_is> is an other name for this method
++C<first_child_is> is another name for this method
+ 
+ Similar methods are available for the other navigation methods: 
+ 
+@@ -13524,7 +13524,7 @@
+ 
+ =item outer_xml
+ 
+-An other synonym for sprint
++Another synonym for sprint
+ 
+ =item xml_text 
+ 
+@@ -14073,7 +14073,7 @@
+ The fix is either to upgrade to Perl 5.16 or later (C<perlbrew> is a great
+ tool to manage several installations of perl on the same machine).
+ 
+-An other, NOT RECOMMENDED, way of fixing the problem, is to switch off weak
++Another, NOT RECOMMENDED, way of fixing the problem, is to switch off weak
+ references by writing C<XML::Twig::_set_weakrefs( 0);> at the top of the code. 
+ This is totally unsupported, and may lead to other problems though, 
+ 
+--- a/Twig_pm.slow
++++ b/Twig_pm.slow
+@@ -10310,7 +10310,7 @@
+ 
+ =item twig_roots
+ 
+-This argument let's you build the tree only for those elements you are
++This argument lets you build the tree only for those elements you are
+ interested in. 
+ 
+   Example: my $t= XML::Twig->new( twig_roots => { title => 1, subtitle => 1});
+@@ -10708,7 +10708,7 @@
+ =item DTD_base <path_to_DTD_directory>
+ 
+ If the DTD is in a different directory, looks for it there, useful to make up 
+-somewhat for the lack of catalog suport in C<expat>. You still need a SYSTEM
++somewhat for the lack of catalog support in C<expat>. You still need a SYSTEM
+ declaration
+ 
+ =item DTD_handler
+@@ -12133,7 +12133,7 @@
+ 
+   if( $elt->first_child && $elt->first_child->passes( 'title')) 
+ 
+-C<first_child_is> is an other name for this method
++C<first_child_is> is another name for this method
+ 
+ Similar methods are available for the other navigation methods: 
+ 
+@@ -13524,7 +13524,7 @@
+ 
+ =item outer_xml
+ 
+-An other synonym for sprint
++Another synonym for sprint
+ 
+ =item xml_text 
+ 
+@@ -14073,7 +14073,7 @@
+ The fix is either to upgrade to Perl 5.16 or later (C<perlbrew> is a great
+ tool to manage several installations of perl on the same machine).
+ 
+-An other, NOT RECOMMENDED, way of fixing the problem, is to switch off weak
++Another, NOT RECOMMENDED, way of fixing the problem, is to switch off weak
+ references by writing C<XML::Twig::_set_weakrefs( 0);> at the top of the code. 
+ This is totally unsupported, and may lead to other problems though, 
+ 
+--- a/tools/xml_spellcheck/xml_spellcheck
++++ b/tools/xml_spellcheck/xml_spellcheck
+@@ -184,7 +184,7 @@
+ 
+ =item --version
+ 
+-Dislay the tool version and exit
++Display the tool version and exit
+ 
+ =item --help
+ 

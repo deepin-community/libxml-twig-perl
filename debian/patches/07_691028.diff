@@ -1,0 +1,19 @@
+Description: Fix xml_grep producing invalid output when input from stdin
+Bug-Debian: https://bugs.debian.org/691028
+Author: Bart Martens <bartm@debian.org>
+
+--- a/tools/xml_grep/xml_grep
++++ b/tools/xml_grep/xml_grep
+@@ -125,8 +125,10 @@
+      
+ my $t= create_twig( %options);
+ 
+-if( @ARGV)
+-  { foreach my $file (@ARGV)
++my @files = @ARGV;
++push @files, '-' unless @files; # fixes http://bugs.debian.org/691028
++if( @files)
++  { foreach my $file (@files)
+       { $current_file= $file;
+ 
+         if( $nb_results_per_file) { $nb_results_left_in_current_file= $nb_results_per_file; }

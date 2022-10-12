@@ -1,0 +1,78 @@
+Source: libxml-twig-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: perl,
+                     expat <!nocheck>,
+                     libhtml-entities-numbered-perl <!nocheck>,
+                     libhtml-tidy-perl <!nocheck>,
+                     libhtml-tree-perl <!nocheck>,
+                     libio-captureoutput-perl <!nocheck>,
+                     libio-string-perl <!nocheck>,
+                     libio-stringy-perl <!nocheck>,
+                     libtest-exception-perl <!nocheck>,
+                     libtest-pod-coverage-perl <!nocheck>,
+                     libtest-pod-perl <!nocheck>,
+                     libtext-iconv-perl <!nocheck>,
+                     libtie-ixhash-perl <!nocheck>,
+                     libunicode-map8-perl <!nocheck>,
+                     libunicode-string-perl <!nocheck>,
+                     libxml-handler-yawriter-perl <!nocheck>,
+                     libxml-parser-perl <!nocheck>,
+                     libxml-sax-machines-perl <!nocheck>,
+                     libxml-simple-perl <!nocheck>,
+                     libxml-xpath-perl <!nocheck>,
+                     libxml-xpathengine-perl <!nocheck>,
+                     libyaml-perl <!nocheck>
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libxml-twig-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libxml-twig-perl.git
+Homepage: https://metacpan.org/release/XML-Twig
+Rules-Requires-Root: no
+
+Package: libxml-twig-perl
+Architecture: all
+Depends: ${perl:Depends},
+         ${misc:Depends},
+         libxml-parser-perl
+Recommends: libhtml-parser-perl,
+            libtext-iconv-perl,
+            libtie-ixhash-perl,
+            libwww-perl,
+            libxml-xpathengine-perl | libxml-xpath-perl
+Suggests: libunicode-map8-perl,
+          libunicode-string-perl,
+          xml-twig-tools
+Description: Perl module for processing huge XML documents in tree mode
+ The XML::Twig module provides a way to process XML documents.  It is built on
+ top of XML::Parser.
+ .
+ The module offers a tree interface to the document, while allowing to
+ output the parts of it that have been completely processed.
+ .
+ It allows minimal resource (CPU and memory) usage by building the
+ tree only for the parts of the documents that need actual processing,
+ through the use of the twig_roots and twig_print_outside_roots
+ options.  The finish and finish_print methods also help to increase
+ performance.
+ .
+ XML::Twig tries to make simple things easy so it tries its best to
+ takes care of a lot of the (usually) annoying (but sometimes
+ necessary) features that come with XML and XML::Parser.
+
+Package: xml-twig-tools
+Architecture: all
+Depends: ${perl:Depends},
+         ${misc:Depends},
+         libxml-parser-perl,
+         libxml-twig-perl
+Description: command line tools for processing XML documents
+ These tools are included:
+  * xml_spellcheck : spellcheck XML files skipping tags
+  * xml_merge : merge back files created by xml_split
+  * xml_pp : XML pretty printer
+  * xml_grep : grep XML files using XML::Twig's subset of XPath
+  * xml_split : split big XML files

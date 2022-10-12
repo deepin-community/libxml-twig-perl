@@ -1,0 +1,13 @@
+Twig.pm_bak
+Twig/XPath.pm_bak
+doc_latin1.xml
+doc_utf8.xml
+t/error.log
+tata.txt
+test_uri
+tmp
+tmp_file
+
+# Modified during build and no more cleaned up
+META.json
+META.yml

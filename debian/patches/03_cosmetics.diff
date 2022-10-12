@@ -1,0 +1,108 @@
+Description: POD Cosmetics, mostly removing word breaks
+ Fixes lintian manpage-has-errors-from-man.
+Author: Bart Martens <bart.martens@advalvas.be>
+
+--- a/Twig_pm.slow
++++ b/Twig_pm.slow
+@@ -10673,7 +10673,7 @@
+ 
+   <p>text <!-- comment --> more text --></p>
+ 
+-are kept at their original position in the text. Using ˝"print"
++are kept at their original position in the text. Using "print"
+ methods like C<print> or C<sprint> will return the comments in the
+ text. Using C<text> or C<field> on the other hand will not.
+ 
+@@ -11481,8 +11481,8 @@
+ 
+ =item in_element
+ 
+-Returns true if NAME is equal to the name of the innermost cur‐
+-rently opened element. If namespace processing is being used and
++Returns true if NAME is equal to the name of the innermost
++currently opened element. If namespace processing is being used and
+ you want to check against a name that may be in a namespace, then
+ use the generate_ns_name method to create the NAME argument.
+ 
+@@ -11490,14 +11490,14 @@
+ 
+ Returns the number of times the given name appears in the context
+ list.  If namespace processing is being used and you want to check
+-against a name that may be in a namespace, then use the gener‐
+-ate_ns_name method to create the NAME argument.
++against a name that may be in a namespace, then use the
++generate_ns_name method to create the NAME argument.
+ 
+ =item context
+ 
+ Returns a list of element names that represent open elements, with
+-the last one being the innermost. Inside start and end tag han‐
+-dlers, this will be the tag of the parent element.
++the last one being the innermost. Inside start and end tag
++handlers, this will be the tag of the parent element.
+ 
+ =item current_line
+ 
+@@ -11531,8 +11531,8 @@
+ 
+ =item element_index
+ 
+-Returns an integer that is the depth-first visit order of the cur‐
+-rent element. This will be zero outside of the root element. For
++Returns an integer that is the depth-first visit order of the
++current element. This will be zero outside of the root element. For
+ example, this will return 1 when called from the start handler for
+ the root element start tag.
+ 
+--- a/Twig.pm
++++ b/Twig.pm
+@@ -10673,7 +10673,7 @@
+ 
+   <p>text <!-- comment --> more text --></p>
+ 
+-are kept at their original position in the text. Using ˝"print"
++are kept at their original position in the text. Using "print"
+ methods like C<print> or C<sprint> will return the comments in the
+ text. Using C<text> or C<field> on the other hand will not.
+ 
+@@ -11481,8 +11481,8 @@
+ 
+ =item in_element
+ 
+-Returns true if NAME is equal to the name of the innermost cur‐
+-rently opened element. If namespace processing is being used and
++Returns true if NAME is equal to the name of the innermost
++currently opened element. If namespace processing is being used and
+ you want to check against a name that may be in a namespace, then
+ use the generate_ns_name method to create the NAME argument.
+ 
+@@ -11490,14 +11490,14 @@
+ 
+ Returns the number of times the given name appears in the context
+ list.  If namespace processing is being used and you want to check
+-against a name that may be in a namespace, then use the gener‐
+-ate_ns_name method to create the NAME argument.
++against a name that may be in a namespace, then use the
++generate_ns_name method to create the NAME argument.
+ 
+ =item context
+ 
+ Returns a list of element names that represent open elements, with
+-the last one being the innermost. Inside start and end tag han‐
+-dlers, this will be the tag of the parent element.
++the last one being the innermost. Inside start and end tag
++handlers, this will be the tag of the parent element.
+ 
+ =item current_line
+ 
+@@ -11531,8 +11531,8 @@
+ 
+ =item element_index
+ 
+-Returns an integer that is the depth-first visit order of the cur‐
+-rent element. This will be zero outside of the root element. For
++Returns an integer that is the depth-first visit order of the
++current element. This will be zero outside of the root element. For
+ example, this will return 1 when called from the start handler for
+ the root element start tag.
+ 
